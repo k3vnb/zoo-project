@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { Animal } from './animal.model';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +19,7 @@ import { Component } from '@angular/core';
       <li>Sex: {{currentAnimal.sex}}</li>
       <li>Likes: {{currentAnimal.likes}}</li>
       <li>Dislikes: {{currentAnimal.dislikes}}</li>
+      <button class="edit-btn" (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
     </ul>
   </div>
   `
@@ -33,20 +34,8 @@ export class AppComponent {
   ];
 selectedAnimal = null;
 
+editButtonHasBeenClicked() {
+  console.log("edit");
 }
 
-export class Animal {
-  public young: boolean = true;
-  public new: boolean = false;
-  constructor(
-    public species: string,
-    public name: string,
-    public age: number,
-    public diet: string,
-    public location: string,
-    public caretakers: number,
-    public sex: string,
-    public likes: string,
-    public dislikes: string,
-  ){ }
 }
