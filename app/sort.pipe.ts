@@ -16,7 +16,13 @@ export class SortPipe implements PipeTransform {
           output.push(input[i]);
         }
       }
+      return output;
+    } else if(desiredSorting === "newAnimals") {
+      for (var i = 3; i < input.length; i++) {
+          output.push(input[i]);
+      } return output;
+    } else {
+      return input;
     }
-    return output;
   }
 }

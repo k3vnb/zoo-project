@@ -11,7 +11,7 @@ import { Animal } from './animal.model';
     <h3>Featured Animals</h3>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+    <new-animal class="new-animal" (newAnimalSender)="addAnimal($event)" [childNewAnimal]="isNew"></new-animal>
   </div>
   `
 })

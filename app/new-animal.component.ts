@@ -28,6 +28,7 @@ import { Animal } from './animal.model';
 })
 
 export class NewAnimalComponent {
+  @Input() childNewAnimal: Animal[];
   @Output() newAnimalSender = new EventEmitter();
 
   submitForm(species: string, name: string, age: number, diet: string, caretakers: number, location: string, sex: string, likes: string, dislikes: string) {
