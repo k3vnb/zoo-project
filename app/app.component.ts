@@ -9,7 +9,7 @@ import { Animal } from './animal.model';
   </div>
   <div class="container">
     <h3>Featured Animals</h3>
-    <animal-list [childAnimalList]="masterAnimalList"></animal-list>
+    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <div *ngIf="selectedAnimal">
       <h3>Edit Animal</h3>
       <label>Species:</label>
@@ -43,7 +43,7 @@ export class AppComponent {
   ];
 selectedAnimal = null;
 
-editButtonHasBeenClicked(clickedAnimal) {
+editAnimal(clickedAnimal) {
   this.selectedAnimal = clickedAnimal;
 }
 finishedEditing() {
