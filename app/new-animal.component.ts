@@ -2,9 +2,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from './animal.model';
 
 @Component({
-  selector: 'new-task',
+  selector: 'new-animal',
   template: `
-    <h1>New Task</h1>
+    <h1>New Animal</h1>
     <label name="species">Species:</label>
     <input #newSpecies name="species"><br>
     <label name="name">Name:</label>
@@ -15,16 +15,23 @@ import { Animal } from './animal.model';
     <input #newDiet name="diet"><br>
     <label name="location">Location:</label>
     <input #newLocation name="location"><br>
+    <label name="caretakers">Caretakers:</label>
+    <input #newCaretakers name="caretakers"><br>
     <label name="sex">Sex:</label>
     <input #newSex name="sex"><br>
     <label name="likes">Likes:</label>
     <input #newLikes name="likes"><br>
     <label name="dislikes">Dislikes:</label>
     <input #newDislikes name="dislikes"><br>
-    <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Add</button>
+    <button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Add</button>
   `
 })
 
 export class NewAnimalComponent {
-  
+  @Output() newAnimalSender = new EventEmitter();
+
+  submitForm(species: string, name: string, age: number, diet: string, caretakers: number, location: string, sex: string, likes: string, dislikes: string) {
+    var newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
+    this.newAnimalSender.emit(newAnimalToAdd);
+  }
 }
