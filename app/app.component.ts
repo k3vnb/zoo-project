@@ -21,6 +21,25 @@ import { Animal } from './animal.model';
       <li>Dislikes: {{currentAnimal.dislikes}}</li>
       <button class="edit-btn" (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
     </ul>
+    <div *ngIf="selectedAnimal">
+      <h3>Edit Animal</h3>
+      <label>Species:</label>
+      <input [(ngModel)]="selectedAnimal.species"><br>
+      <label>Name:</label>
+      <input [(ngModel)]="selectedAnimal.name"><br>
+      <label>Age:</label>
+      <input [(ngModel)]="selectedAnimal.age"><br>
+      <label>Diet:</label>
+      <input [(ngModel)]="selectedAnimal.diet"><br>
+      <label>Location:</label>
+      <input [(ngModel)]="selectedAnimal.location"><br>
+      <label>Sex:</label>
+      <input [(ngModel)]="selectedAnimal.sex"><br>
+      <label>likes:</label>
+      <input [(ngModel)]="selectedAnimal.likes"><br>
+      <label>Dislikes:</label>
+      <input [(ngModel)]="selectedAnimal.dislikes"><br>
+    </div>
   </div>
   `
 })
@@ -34,8 +53,8 @@ export class AppComponent {
   ];
 selectedAnimal = null;
 
-editButtonHasBeenClicked() {
-  console.log("edit");
+editButtonHasBeenClicked(clickedAnimal) {
+  this.selectedAnimal = clickedAnimal;
 }
 
 }
