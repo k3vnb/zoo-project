@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Animal } from './animal.model';
+// import { Animal } from './animal.model';
 
 @Component({
   selector: 'app-root',
@@ -9,18 +9,44 @@ import { Animal } from './animal.model';
   </div>
   <div class="container">
     <h3>Featured Animals</h3>
-    <animal-list></animal-list>
+    <ul *ngFor="let currentAnimal of animals">
+      <li>Species: {{currentAnimal.species}}</li>
+      <li>Name: {{currentAnimal.name}}</li>
+      <li>Age: {{currentAnimal.age}}</li>
+      <li>Diet: {{currentAnimal.diet}}</li>
+      <li>Location: {{currentAnimal.location}}</li>
+      <li>Caretakers: {{currentAnimal.caretakers}}</li>
+      <li>Sex: {{currentAnimal.sex}}</li>
+      <li>Likes: {{currentAnimal.likes}}</li>
+      <li>Dislikes: {{currentAnimal.dislikes}}</li>
+    </ul>
   </div>
   `
 })
 
 export class AppComponent {
   zooName: string = 'YouZoo';
-  masterAnimalList: Animal[] = [
+  animals: Animal[] = [
     new Animal('Crow', 'Capt. Black Sparrow', 2, 'Omnivore', 'E7', 2, 'Male', 'French Fries', 'Humans'),
     new Animal('Black Bear', 'Elsa Major', 2, 'Omnivore', 'C3', 4, 'Female', 'Puzzles', 'Bees'),
     new Animal('Siberian Tiger', 'Kitty', 2, 'Carnivore', 'D2', 2, 'Female', 'Riddles', 'Puns'),
   ];
+selectedAnimal = null;
 
+}
 
+export class Animal {
+  public young: boolean = true;
+  public new: boolean = false;
+  constructor(
+    public species: string,
+    public name: string,
+    public age: number,
+    public diet: string,
+    public location: string,
+    public caretakers: number,
+    public sex: string,
+    public likes: string,
+    public dislikes: string,
+  ){ }
 }

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
-import { Animal } from './animal.model';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Animal } from './app.component';
 
 @Component({
   selector: 'animal-list',
   template: `
-    <ul>
+    <ul *ngFor="let currentAnimal of animals">
       <li>Species: {{currentAnimal.species}}</li>
       <li>Name: {{currentAnimal.name}}</li>
       <li>Age: {{currentAnimal.age}}</li>
@@ -20,5 +20,5 @@ import { Animal } from './animal.model';
 })
 
 export class AnimalListComponent {
-
+  @Input() animals: Animal[];
 }
