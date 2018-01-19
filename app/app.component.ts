@@ -20,7 +20,7 @@ export class AppComponent {
   zooName: string = 'YouZoo';
   masterAnimalList: Animal[] = [
     new Animal('Crow', 'Capt. Black Sparrow', 2, 'Omnivore', 'E7', 2, 'Male', 'French Fries', 'Humans'),
-    new Animal('Black Bear', 'Elsa Major', 2, 'Omnivore', 'C3', 4, 'Female', 'Puzzles', 'Bees'),
+    new Animal('Black Bear', 'Elsa Major', 7, 'Omnivore', 'C3', 4, 'Female', 'Puzzles', 'Bees'),
     new Animal('Siberian Tiger', 'Kitty', 2, 'Carnivore', 'D2', 2, 'Female', 'Riddles', 'Puns'),
   ];
   selectedAnimal = null;
