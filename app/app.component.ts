@@ -39,6 +39,7 @@ import { Animal } from './animal.model';
       <input [(ngModel)]="selectedAnimal.likes"><br>
       <label>Dislikes:</label>
       <input [(ngModel)]="selectedAnimal.dislikes"><br>
+      <button (click)="finishedEditing()">Done</button>
     </div>
   </div>
   `
@@ -55,6 +56,9 @@ selectedAnimal = null;
 
 editButtonHasBeenClicked(clickedAnimal) {
   this.selectedAnimal = clickedAnimal;
+}
+finishedEditing() {
+  this.selectedAnimal = null;
 }
 
 }
