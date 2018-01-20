@@ -1,0 +1,27 @@
+.jumbotron {
+  text-align: center;
+}
+
+.youtube {
+  background-color: red;
+  border-radius: 32%;
+  color: white;
+  padding: 2%;
+}
+
+.edit-btn {
+  font-size: 11px;
+  background-color: lightblue;
+  border-radius: 20%;
+  height: 20px;
+  box-shadow: 1px 1px 3px black;
+  margin-left: 30%;
+}
+
+.add-btn {
+  background-color: #295f2b;
+  border-radius: 20%;
+  color: white;
+  margin-left: 30%;
+  box-shadow: 1px 1px 3px black;
+}

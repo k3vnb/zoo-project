@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="jumbotron">
-    <h1>{{zooName}}</h1>
+    <h1>You<span class="youtube">Zoo</span></h1>
   </div>
   <div class="container">
     <h3>Featured Animals</h3>
