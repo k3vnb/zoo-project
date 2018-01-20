@@ -1,6 +1,13 @@
 .jumbotron {
   text-align: center;
 }
+li {
+  list-style: none;
+}
+h3, select, ul {
+  margin-bottom: 20px;
+}
+
 
 .youtube {
   background-color: red;
@@ -24,4 +31,22 @@
   color: white;
   margin-left: 30%;
   box-shadow: 1px 1px 3px black;
+}
+
+.newbie {
+  border: 1px solid;
+  padding: 5%;
+  margin-bottom: 20px;
+  background-color: #fa807294;
+  width: 60vw;
+  box-shadow: 1px 1px 2px black;
+}
+.newbie input {
+  background-color: #fa807200;
+  border: none;
+  border-bottom: 1px solid salmon;
+  margin-left: 10%;
+}
+.newbie h4 {
+  text-align: center;
 }
