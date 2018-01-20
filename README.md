@@ -3,12 +3,11 @@
 ### by **Kevin Boyle**
 
 ## Description
-
-_ https://lemurriot.github.io// _
+This project allows the user to edit and enter new entries in dynamic display of zoo animal info. It can be found at https://lemurriot.github.io/zoo-project/
 
 
 ## Specs & Planning
-_On load, this page will display a sample of database entries based on animal objects. An animal object, for example, would look like:
+On load, this page will display a sample of database entries based on animal objects. An animal object, for example, would look like:
 Species: "Crow"
 Name: "Capt. Black Sparrow"
 Age: 2
@@ -17,7 +16,7 @@ Location: "Section E4"
 Caretakers: 1
 Sex: "Male"
 Likes: "French Fries"
-Dislikes: "People"_
+Dislikes: "People"
 
 
 _The project will also allow interactive elements for users, for example:_
@@ -35,18 +34,26 @@ _The project will also allow interactive elements for users, for example:_
 _With more time, more functionality could be built out including:_
 4. User may timestamp admittance date to the animal object using Moment JS npm.
 5. Animals could be displayed according to location within the zoo, and correspond to a displayed map of the zoo.
+6. It could be fun to create an online virtual zoo, perhaps of extinct or fictional animals. Low cost projects could incorporate an API for dynamic imagery, ie, GIPHY.
 
-###Planning
-_This project will need a **root component** (app.component) to establish a base, a **root module** (app.module) to organize imports from @angular/core & intra-app components, modules & pipes, a **main file** (app.main) to establish minimum platform necessary for running app in the browser. An **animal model** will be necessary to establish what kind of key-value pairs are included in the animal object, as well as boolean values (ie, age is over 2)._
+_Planning_
+This project will need a **root component** (app.component) to establish a base, a **root module** (app.module) to organize imports from @angular/core & intra-app components, modules & pipes, a **main file** (app.main) to establish minimum platform necessary for running app in the browser. An **animal model** will be necessary to establish what kind of key-value pairs are included in the animal object, as well as boolean values (ie, age is over 2).
 
-_The app will also require 3 additional components: an **animal-list component**, which will act as first captain to the root component, and will handle event listeners within subsequent apps for dynamic and interactive list display. It will also house the html template for appending the lists of animals. An **edit-animal** component will be responsible for receiving data from its parent, allowing user to overwrite that data, and returning it to the parent via event listeners. A **new-animal** component will be responsible for allowing users to add new animals to the list by filling out a provided form and sending that information to the parent component.  Finally a sorting **pipe** will be necessary for filtering values based on selected filtration options, which will correspond to boolean values coded into the model_
+The app will also require 3 additional components: an **animal-list component**, which will act as first captain to the root component, and will handle event listeners within subsequent apps for dynamic and interactive list display. It will also house the html template for appending the lists of animals. An **edit-animal** component will be responsible for receiving data from its parent, allowing user to overwrite that data, and returning it to the parent via event listeners. A **new-animal** component will be responsible for allowing users to add new animals to the list by filling out a provided form and sending that information to the parent component.  Finally a sorting **pipe** will be necessary for filtering values based on selected filtration options, which will correspond to boolean values coded into the model
 
 
 ## Setup Instructions
-_ . _
+To clone this repository: user must run the following commands to initialize the project after cloning:
+* $ npm install
+* $ bower init
+* $ bower install
+* $ gulp build
+* $ gulp serve
+
+Some familiarity with Angular2, ES6, and asset pipeline management will help the user understand the flow of information.
 
 ## Additional info
-_This page is not connected to a server, any user edits or contributions to the list will be erased when page is refreshed._
+This page is not connected to a server, any user edits or contributions to the list will be erased when page is refreshed.
 
 
 ## Support and contact details
@@ -55,7 +62,7 @@ _Please contact Kevin Boyle at papershack@gmail.com with any questions_
 
 ## Technologies Used
 
-_Angular 2 JS is used predominantly. Angular requires NPM, and this project uses Gulp for asset pipeline management._
+Angular 2 JS is used predominantly. Angular requires NPM, and this project uses Gulp for asset pipeline management.
 
 ### License
 
